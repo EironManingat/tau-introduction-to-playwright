@@ -10,7 +10,7 @@ Welcome to the course "Introduction to Playwright" by [Renata Andrade](https://t
 
 1. Change the reporter to 2 different options of your preference (mouse hover "reporter" to see the valid options). Besides the HTML, which ones could be useful for a project and why?
 
-1. Change the value of trace for each option available and identify the differences between them. Note how the size of the folder changes for each option.
+1. Change the value of trace for each option available and identify the differences between them. Note how the size of the folder changes for each option. lumalaki yung size
 
 1. Enable the video and check how it looks. Is it more useful than the trace in your opinion?
 
