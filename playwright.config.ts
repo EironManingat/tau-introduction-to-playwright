@@ -115,6 +115,22 @@ export default defineConfig({
       },
     },
 
+    {
+      name: 'apple',
+      use: { 
+        baseURL: 'https://playwright.dev/',
+         ...devices['Desktop Safari']
+      },
+    },
+
+    {
+      name: 'apple',
+      use: { 
+        baseURL: 'https://playwright.dev/',
+         ...devices['iPhone 14 Pro Max']
+      },
+    },
+
     // Example only
     {
       name: 'local',
