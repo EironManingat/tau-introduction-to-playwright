@@ -11,11 +11,12 @@ const pageUrl = /.*intro/;
 test.beforeEach(async ({page}) => {
     await page.goto(URL);
     homePage = new HomePage(page);
+    topMenuPage = new UpdatedTopMenuPage(page);
 });
 
 async function clickGetStarted(page: Page) {
     await homePage.clickGetStarted();
-    topMenuPage = new UpdatedTopMenuPage(page);
+    
 }
 
 test.describe('Playwright website', () => {
@@ -33,9 +34,9 @@ test.describe('Playwright website', () => {
 
     test.only('check top bar', async ({ page }) => {
         // Act
-        //await topMenuPage.clickJava();
-       // await topMenuPage.clickAPIs();
-        await topMenuPage.assertSearchPlaceholder();
+        await topMenuPage.clickJava();
+        await topMenuPage.clickAPIs();
+        await topMenuPage.clickGitHub();
         // Assert
         //await topMenuPage.assertPageUrl(pageUrl);
     });

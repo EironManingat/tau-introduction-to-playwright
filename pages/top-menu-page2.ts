@@ -8,6 +8,7 @@ export class UpdatedTopMenuPage{
     //Assert 
     readonly page:Page;
     readonly pwForJava:Locator;
+
     readonly docsLink:Locator
     readonly apiLink:Locator;
     readonly javaLink:Locator;
@@ -20,10 +21,11 @@ export class UpdatedTopMenuPage{
 
     constructor (page:Page){
         this.page = page;
-        this.pwForJava = page.getByRole('link',{name:'Playwright for Java'});
+        this.pwForJava = page.locator('a.navbar__brand');
+
         this.docsLink = page.getByRole('link', {name:'Docs'});
         this.apiLink = page.getByRole('link',{name:'API'});
-        this.javaLink = page.getByRole('button',{name:'Java'});
+        //this.javaLink = page.locator('a[href="/java/"]');
         this.communityLink = page.getByRole('link',{name:'Community'});
         this.gitHubLink = page.getByRole('link',{name:'GitHub repository'})
         this.discordLink = page.getByRole('link',{name:'Discord server'})
@@ -33,6 +35,8 @@ export class UpdatedTopMenuPage{
     }
 
     async clickJava(){
+        // Check if the element is visible before attempting to click
+        await this.pwForJava.waitFor({ state: 'visible', timeout: 60000 });
         await this.pwForJava.click();
     }
 
