@@ -13,7 +13,7 @@ Welcome to the course "Introduction to Playwright" by [Renata Andrade](https://t
 1. Explore the option `await page.pause();` to debug a test. Is it helpful? How is that compared to the Playwright Inspector and VS Code extension?
 
 1. When running the tests in UI, activate the [watch mode](https://playwright.dev/docs/test-ui-mode#watch-mode) and update a few tests. What happens?
-
+Easier locating 
 💡 Share on LinkedIn something interesting you've learned! Don't forget to tag me [Renata Andrade](https://www.linkedin.com/in/raptatinha/).
 
 If you have questions, feel free to post them on [github](https://github.com/raptatinha/tau-introduction-to-playwright/issues).

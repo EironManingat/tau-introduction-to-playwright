@@ -32,7 +32,7 @@ let eyes: Eyes;
 test.beforeAll(async() => {
 
     if (USE_ULTRAFAST_GRID) {
-        Runner = new VisualGridRunner({ testConcurrency: 5 });
+        Runner = new VisualGridRunner({ testConcurrency: 1 });
     }
     else {
         Runner = new ClassicRunner();
